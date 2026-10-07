@@ -1,0 +1,28 @@
+{
+  "name": "role-play-project",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Aplicación para jugar rol con personajes interpretados por IA",
+  "type": "module",
+  "scripts": {
+    "start": "pnpm -r --if-present start",
+    "dev": "pnpm -r --parallel --if-present dev",
+    "dev:api": "pnpm --filter @rp/api dev",
+    "build": "pnpm -r --if-present build",
+    "typecheck": "pnpm -r --if-present typecheck"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.9.1",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.9.1",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
