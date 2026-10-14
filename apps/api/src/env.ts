@@ -9,10 +9,11 @@ try {
   if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
 }
 
-// Se valida solo lo que la API usa hoy. DATABASE_URL se suma en RP-06 y las variables AI_* en RP-09.
+// Se valida solo lo que la API usa hoy. Las variables AI_* se suman en RP-09.
 const envSchema = z.object({
   PORT: z.coerce.number().int().positive().default(3000),
   NODE_ENV: z.enum(["development", "production", "test"]).default("development"),
+  DATABASE_URL: z.string().regex(/^postgres(ql)?:\/\//, "debe ser una URL de Postgres (postgresql://...)"),
 });
 
 const parsed = envSchema.safeParse(process.env);

@@ -16,5 +16,7 @@ export const personaSchema = z.object({
 });
 export type Persona = z.infer<typeof personaSchema>;
 
-export const messageRoleSchema = z.enum(["user", "assistant"]);
+// Constante aparte para que la DB (pgEnum de Drizzle) use exactamente los mismos valores.
+export const MESSAGE_ROLES = ["user", "assistant"] as const;
+export const messageRoleSchema = z.enum(MESSAGE_ROLES);
 export type MessageRole = z.infer<typeof messageRoleSchema>;

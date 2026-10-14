@@ -9,7 +9,10 @@
     "dev": "pnpm -r --parallel --if-present dev",
     "dev:api": "pnpm --filter @rp/api dev",
     "build": "pnpm -r --if-present build",
-    "typecheck": "pnpm -r --if-present typecheck"
+    "typecheck": "pnpm -r --if-present typecheck",
+    "db:generate": "pnpm --filter @rp/api db:generate",
+    "db:migrate": "pnpm --filter @rp/api db:migrate",
+    "db:studio": "pnpm --filter @rp/api db:studio"
   },
   "engines": {
     "node": ">=24"
