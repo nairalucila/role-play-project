@@ -37,3 +37,4 @@ pnpm typecheck
 | `pnpm db:generate` | Genera una migración SQL a partir de `apps/api/src/db/schema.ts` |
 | `pnpm db:migrate` | Aplica las migraciones pendientes en la base |
 | `pnpm db:studio` | Abre un visor web de la base de datos |
+| `pnpm db:seed` | Carga el usuario de desarrollo y personajes de ejemplo (se puede correr varias veces) |

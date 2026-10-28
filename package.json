@@ -12,7 +12,8 @@
     "typecheck": "pnpm -r --if-present typecheck",
     "db:generate": "pnpm --filter @rp/api db:generate",
     "db:migrate": "pnpm --filter @rp/api db:migrate",
-    "db:studio": "pnpm --filter @rp/api db:studio"
+    "db:studio": "pnpm --filter @rp/api db:studio",
+    "db:seed": "pnpm --filter @rp/api db:seed"
   },
   "engines": {
     "node": ">=24"

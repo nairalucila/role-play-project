@@ -6,6 +6,7 @@ export const messageRole = pgEnum("message_role", MESSAGE_ROLES);
 
 const createdAt = () => timestamp("created_at", { withTimezone: true }).notNull().defaultNow();
 
+
 export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
   displayName: varchar("display_name", { length: 80 }).notNull(),

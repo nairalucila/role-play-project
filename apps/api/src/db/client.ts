@@ -7,7 +7,6 @@ const sql = postgres(env.DATABASE_URL);
 
 export const db = drizzle(sql, { schema });
 
-// Cierra las conexiones (para el apagado del servidor y los scripts).
 export function closeDb() {
   return sql.end();
 }
