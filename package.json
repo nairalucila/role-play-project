@@ -10,6 +10,7 @@
     "dev:api": "pnpm --filter @rp/api dev",
     "build": "pnpm -r --if-present build",
     "typecheck": "pnpm -r --if-present typecheck",
+    "test": "pnpm -r --if-present test",
     "db:generate": "pnpm --filter @rp/api db:generate",
     "db:migrate": "pnpm --filter @rp/api db:migrate",
     "db:studio": "pnpm --filter @rp/api db:studio",

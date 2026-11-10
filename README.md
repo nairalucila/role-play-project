@@ -34,6 +34,7 @@ pnpm typecheck
 | `pnpm start` | Levanta la API sin recarga automática |
 | `pnpm build` | Build de todos los paquetes |
 | `pnpm typecheck` | Chequeo de tipos en todo el monorepo |
+| `pnpm test` | Corre los tests unitarios de todos los paquetes |
 | `pnpm db:generate` | Genera una migración SQL a partir de `apps/api/src/db/schema.ts` |
 | `pnpm db:migrate` | Aplica las migraciones pendientes en la base |
 | `pnpm db:studio` | Abre un visor web de la base de datos |

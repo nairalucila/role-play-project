@@ -15,6 +15,12 @@ export function createApp() {
 
   // Express 5 captura también los errores de handlers async y los manda acá.
   const errorHandler: ErrorRequestHandler = (err, _req, res, _next) => {
+    // Errores del cliente (ej: JSON mal formado → 400): se respeta el status y se expone el mensaje.
+    const status: unknown = err?.status ?? err?.statusCode;
+    if (typeof status === "number" && status >= 400 && status < 500) {
+      res.status(status).json({ error: err.expose ? err.message : "Bad request" });
+      return;
+    }
     console.error(err);
     res.status(500).json({ error: "Internal server error" });
   };
