@@ -1,6 +1,9 @@
 import request from "supertest";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { createApp } from "../src/app.ts";
+
+// createApp() registra todas las rutas; se simula el repositorio para no cargar la conexión a la base.
+vi.mock("../src/characters/characters.repository.ts", () => ({}));
 
 // createApp() no levanta el servidor ni toca la base: supertest le hace pedidos en memoria.
 const app = createApp();
